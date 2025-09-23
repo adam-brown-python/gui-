@@ -1,0 +1,21 @@
+from tkinter import *
+
+root = Tk()
+login = Toplevel()
+root.config(bg="light blue")
+login.title("Insert Card")
+
+card_lbl = Label(login,text="Card: ",font=("alias",15),width=20)
+card_ent = Entry(login,font=("alias",15))
+password_lbl = Label(login,text="password:",font=("alias",15),width=20)
+password_ent = Entry(login,font=("alias",15))
+login_btn = Button(login,text="Log in",bg="light green",font=("alias",15),width=10)
+cancel_btn = Button(login,text="Cancel",bg="red",font=("alias",15),command=root.destroy)
+card_lbl.grid(row=0,column=0,sticky=EW)
+card_ent.grid(row=0,column=1,sticky=EW)
+password_lbl.grid(row=1,column=0,sticky=EW)
+password_ent.grid(row=1,column=1,sticky=EW)
+login_btn.grid(row=2,column=0,sticky=EW)
+cancel_btn.grid(row=2,column=1,sticky=EW)
+root.withdraw()
+login.mainloop()
